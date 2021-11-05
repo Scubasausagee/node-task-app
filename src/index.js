@@ -1,14 +1,6 @@
-const express=require('express')
-require('./DB/mongose')
-const UserRouter=require('./Routers/user')
-const TaskRouter=require('./Routers/task')
+const app=require('./app')
 
-const app=express()
 const port=process.env.PORT
-
-app.use(express.json())
-app.use(UserRouter)
-app.use(TaskRouter)
 
 app.listen(port,()=>{
     console.log('Server up on port '+port)
